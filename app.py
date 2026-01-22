@@ -19,7 +19,7 @@ if file:
 
 
 with st.sidebar:
-    st.title("SmartEstate: CUSTOMER SEGMENTATION")
+    st.title("MarketPulse: CUSTOMER SEGMENTATION")
     st.image('https://cdn-icons-png.flaticon.com/512/7111/7111143.png')
     if df is not None:
         features = st.multiselect("Select Features: ",options=df.columns, default=["Annual Income (k$)","Spending Score (1-100)"]) #static for these column names only
@@ -68,5 +68,6 @@ if df is not None:
     st.subheader("CLUSTERED DATA")
 
     st.scatter_chart(data=df,x="Annual Income (k$)",y="Spending Score (1-100)",color="clusters")
+
 
 
